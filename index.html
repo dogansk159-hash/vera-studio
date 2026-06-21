@@ -609,41 +609,31 @@
 
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script>
+    <script>
   async function projeleriYukle() {
     const track = document.getElementById('projectTrack');
-    // Burada senin projeler klasöründeki dosya isimlerin olacak
-    const projeDosyalari = ['torbali-konut.md', 'kemalpasa-endustriyel.md']; // Örnek isimler
+    
+    // Projeler klasöründeki dosyaların listesi (Gelecekte burayı otomatik taratacağız)
+    const dosyaListesi = ['torbali-konut.md', 'kemalpasa-endustriyel.md']; 
 
-    for (const dosya of projeDosyalari) {
+    for (const dosya of dosyaListesi) {
       const response = await fetch(`/projeler/${dosya}`);
       const metin = await response.text();
-      const veri = parseMarkdown(metin); // Markdown içindeki başlık/görsel verilerini ayırır
-
+      
+      // Markdown içindeki basit verileri çekelim
+      // Not: Markdown dosyanın içindeki veriyi ayrıştırmak için 
+      // daha profesyonel bir yapıya geçeceğiz ama başlangıç için:
       const card = `
         <div class="project-card-premium">
-          <div class="card-image-slot">
-            <img src="${veri.image}" alt="${veri.title}">
-            <span class="premium-tag">${veri.category}</span>
-          </div>
-          <div class="card-details-slot">
-            <h3>${veri.title}</h3>
-            <p>${veri.desc}</p>
-          </div>
+           <div class="card-details-slot">
+              <h3>${dosya.replace('.md', '').toUpperCase()}</h3>
+              <p>Panelle eklenen içerik buraya gelecek...</p>
+           </div>
         </div>
       `;
       track.innerHTML += card;
     }
   }
-
-  // Markdown'ın içindeki YAML verilerini okumak için yardımcı fonksiyon
-  function parseMarkdown(md) {
-    // Bu kısım, Decap CMS'in Markdown içine koyduğu --- başlıkları okur
-    // Şimdilik basit bir yapı kurduk, projelerin arttıkça burayı geliştiririz.
-    return { title: "Proje Adı", image: "assets/projects/p1.png", category: "Statik", desc: "Açıklama" };
-  }
-
   projeleriYukle();
 </script>
 </body>
