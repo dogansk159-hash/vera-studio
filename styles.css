@@ -1,0 +1,1403 @@
+/* --- Profesyonel Mimari Tasarım Temelleri ve Değişkenler --- */
+
+:root {
+    --color-bg: #ffffff;
+    --color-bg-alt: #fbfbfb;
+    --color-sidebar-bg: #f4f4f4;
+    --color-text-dark: #111111;
+    --color-text-muted: #555555;
+    --color-border: #e5e5e5;
+    --font-sans: 'Montserrat', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+/* Mobil cihazlar için temel sigorta kodları */
+
+body {
+    overflow-x: hidden;
+    /* Yan kaydırmaları tamamen engeller */
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    /* Resimlerin ekrandan taşmasını engeller */
+    height: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text-dark);
+    line-height: 1.7;
+}
+
+
+/* --- NAVBAR VE DIKEY SOSYAL BAR MIMARISI --- */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    transition: var(--transition-smooth);
+}
+
+.navbar.scrolled {
+    height: 65px;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.navbar-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo .logo-img {
+    max-height: 60px;
+    width: auto;
+    transition: var(--transition-smooth);
+}
+
+.navbar.scrolled .navbar-logo .logo-img {
+    max-height: 50px;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar-menu a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    padding: 10px 0;
+    transition: var(--transition-smooth);
+}
+
+.navbar-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-text-dark);
+    transition: var(--transition-smooth);
+}
+
+.navbar-menu a:hover::after,
+.navbar-menu a.active::after {
+    width: 100%;
+}
+
+.navbar-menu a:hover,
+.navbar-menu a.active {
+    color: var(--color-text-dark);
+}
+
+.left-social-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 100vh;
+    background-color: var(--color-sidebar-bg);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.sidebar-social-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.sidebar-social-wrapper span {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    white-space: nowrap;
+}
+
+.sidebar-social-wrapper .divider {
+    width: 1px;
+    height: 50px;
+    background-color: #bbb;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    transition: var(--transition-smooth);
+}
+
+.social-icons a:hover {
+    color: var(--color-text-dark);
+    transform: translateY(-3px);
+}
+
+.main-wrapper {
+    margin-left: 75px;
+    padding-top: 90px;
+    width: calc(100% - 75px);
+    min-height: 100vh;
+    position: relative;
+}
+
+.container {
+    width: 88%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 120px 0;
+}
+
+.section-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.section-number {
+    font-size: 14px;
+    font-weight: 700;
+    color: #bbb;
+    letter-spacing: 1px;
+}
+
+.section-tagline {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+
+/* Hamburger Butonu ve Mobil Menü Stilleri */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--color-text-dark);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease-in-out;
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu a {
+    font-size: 24px;
+    margin: 20px 0;
+    color: var(--color-text-dark);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.mobile-menu a {
+    font-size: 13px;
+    /* Masaüstü ile aynı boyut */
+    font-weight: 600;
+    /* Masaüstü ile aynı ağırlık */
+    text-transform: uppercase;
+    /* Büyük harf */
+    letter-spacing: 1.5px;
+    /* Harf aralığı aynı */
+    color: var(--color-text-muted);
+    /* Pasif renk */
+    text-decoration: none;
+    font-family: var(--font-sans);
+    position: relative;
+    padding: 10px 0;
+    transition: var(--transition-smooth);
+}
+
+.mobile-menu a.active-menu-link {
+    color: var(--color-text-dark);
+    /* Aktif olunca koyulaşır */
+}
+
+
+/* Aktif linkin altındaki çizgi stili */
+
+.mobile-menu a.active-menu-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    /* Çizgiyi ortalamak için */
+    transform: translateX(-50%);
+    /* Ortalamayı sabitlemek için */
+    width: 30px;
+    /* Çizginin uzunluğunu istediğin gibi ayarlayabilirsin */
+    height: 2px;
+    background-color: var(--color-text-dark);
+}
+
+
+/* Hero Üst Alan */
+
+.hero-section {
+    height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at 85% 25%, #fbfbfb 0%, #f5f5f5 100%);
+    position: relative;
+    overflow: hidden; /* Taşmaları kesinlikle engeller */
+}
+
+/* Line Art Çiziminin Ayarları */
+.hero-line-art {
+    position: absolute;
+    bottom: -5%;
+    right: 0;
+    height: 105%;
+    width: auto;
+    opacity: 0.06;
+    z-index: 0;
+    pointer-events: none;
+    /* Görselin kendi içindeki hizalaması */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-line-art img {
+    height: 100%;
+    width: auto;
+    object-fit: contain; /* Görseli orantılı sığdırır */
+    object-position: bottom right; /* Sağ alt köşeye hizalar */
+}
+
+/* Yazı ve Butonların Katmanı */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Görselin üstünde kalmayı garantiler */
+    padding: 0 40px; /* İçerideki metinlerin kenardan boşluk almasını sağlar */
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin-bottom: 24px;
+}
+
+.hero-content .highlight {
+    font-weight: 700;
+    color: var(--color-primary); /* Varsa ana renk değişkenin */
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--color-text-muted);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-bottom: 40px;
+    max-width: 650px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+/* Buton Dünyası */
+
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border: 1px solid var(--color-text-dark);
+    transition: var(--transition-smooth);
+}
+
+.btn-primary {
+    background-color: var(--color-text-dark);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--color-text-dark);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-text-dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-text-dark);
+    color: #ffffff;
+}
+
+
+/* Hakkımızda */
+
+.about-section {
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+.about-text-area .lead-text {
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #222;
+    margin-bottom: 24px;
+}
+
+.about-text-area p {
+    font-size: 15px;
+    color: var(--color-text-muted);
+    margin-bottom: 16px;
+}
+
+
+/* Hizmetlerimiz */
+
+.services-section {
+    background-color: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 60px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.services-grid .service-card {
+    background-color: var(--color-bg);
+    padding: 40px 30px;
+    border: 1px solid var(--color-border);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 280px;
+    transition: var(--transition-smooth);
+}
+
+.services-grid .text-up {
+    transform: translateY(0);
+}
+
+.services-grid .text-down {
+    transform: translateY(45px);
+}
+
+.services-grid .text-up:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+    border-color: var(--color-text-dark);
+}
+
+.services-grid .text-down:hover {
+    transform: translateY(37px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+    border-color: var(--color-text-dark);
+}
+
+.service-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    padding-right: 20px;
+    color: var(--color-text-dark);
+}
+
+.service-card p {
+    font-size: 13.5px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.service-icon {
+    font-size: 12px;
+    font-weight: 700;
+    color: #ccc;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+
+/* --- PROJELER KARUSEL ALANI VE PREMIUM KART DÜZENİ --- */
+
+.projects-section {
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.container-fluid-carousel {
+    width: 100%;
+    padding: 120px 0 80px 0;
+    position: relative;
+}
+
+.container-meta-wrapper {
+    width: 88%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.carousel-master-container {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    padding: 0 4%;
+}
+
+.carousel-viewport {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: auto;
+    cursor: pointer;
+    perspective: 1400px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-viewport.grabbing {
+    cursor: grabbing;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    padding: 25px 10px;
+}
+
+
+/* Premium Kart Taşıyıcı Gövdesi */
+
+.project-card-premium {
+    width: calc((1140px - (24px * 4)) / 5);
+    min-width: 215px;
+    background-color: var(--color-bg);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03);
+    transform-style: preserve-3d;
+    transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.45s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.45s ease;
+}
+
+.project-card-premium:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+    border-color: var(--color-text-dark);
+}
+
+.card-image-slot {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background-color: #fafafa;
+    display: flex;        /* Ekledik */
+    flex-direction: column; /* Ekledik */
+}
+
+.premium-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f6f6f6 0%, #ebebeb 100%);
+}
+
+.premium-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 4px 10px;
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;       /* Bu çok önemli, alt boşluğu keser */
+}
+.premium-placeholder {
+    display: none !important; /* Placeholder'ı tamamen yok et */
+}
+
+/* ==========================================================================
+
+/* 1. Yazı Alanındaki Tüm Eski Kalıntıları ve Şekil Bozukluklarını Sıfırlama */
+
+.card-details-slot {
+    font-family: var(--font-sans) !important;
+    font-style: normal !important;
+    padding: 20px;
+    background-color: var(--color-bg);
+    border-top: 1px solid rgba(0, 0, 0, 0.02);
+    position: relative;
+    overflow: hidden;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 🚨 ESKİ SİYAH BUTON ANİMASYONUNU TAMAMEN İPTAL EDİYORUZ (Ghost Buton Temizliği) */
+
+.card-details-slot::after,
+.card-details-slot::before,
+.project-card-premium::after,
+.project-card-premium::before {
+    display: none !important;
+    content: none !important;
+    transform: none !important;
+    opacity: 0 !important;
+}
+
+
+/* 2. Yazıların Boyutlarını ve Şekillerini Orijinal Modern Haline Getirme */
+
+.card-details-slot h3 {
+    font-family: var(--font-sans) !important;
+    font-size: 14.5px !important;
+    font-weight: 600 !important;
+    font-style: normal !important;
+    margin-bottom: auto !important;
+    color: var(--color-text-dark) !important;
+    text-transform: none !important;
+    letter-spacing: 0px !important;
+    transition: opacity 0.3s ease;
+    min-height: 40px;
+}
+
+.project-meta-specs {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    margin-top: auto !important;
+    font-family: var(--font-sans) !important;
+    font-style: normal !important;
+    transition: opacity 0.3s ease;
+}
+
+.spec-item {
+    font-size: 12px !important;
+    color: var(--color-text-muted) !important;
+    font-family: var(--font-sans) !important;
+    font-style: normal !important;
+}
+
+.spec-label {
+    font-weight: 600 !important;
+    color: var(--color-text-dark) !important;
+}
+
+
+/* 3. Hover Anında Sadece Yazıların Saf Dışı Bırakılması */
+
+.project-card-premium:hover .card-details-slot h3,
+.project-card-premium:hover .project-meta-specs {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+
+/* 4. SADECE YAZI ALANINDA BELİRECEK MODERN BLUR (GLASSMORPHISM) KATMANI */
+
+.project-card-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(255, 255, 255, 0.45) !important;
+    /* Görseli bozmayan temiz buzlu cam rengi */
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease, visibility 0.3s ease !important;
+    z-index: 99 !important;
+    /* En üstte görünmesi için dikey sıra değeri */
+    border-radius: 0 0 16px 16px !important;
+    /* Sadece alt köşelerin ovalliğini korur */
+}
+
+
+/* Karta hover yapıldığında blur katmanını devreye sok */
+
+.project-card-premium:hover .project-card-overlay {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.btn-details {
+    /* Katı siyah yerine, ışığı geçiren ve arkasını bulanıklaştıran yarı şeffaf koyu cam tonu */
+    background: rgba(255, 255, 255, 0.25) !important;
+    /* Tamamen açık renkli şeffaf taban */
+    color: #111111 !important;
+    /* Siyah şık yazı */
+    padding: 10px 24px !important;
+    border-radius: 50px !important;
+    font-family: var(--font-sans) !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+    /* Butonun sınırlarına ince mimari bir cam ışıltısı katıyoruz */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    /* Kapsülün içine ekstra derinlik hissi veren hafif blur */
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    /* Ağır gölgeler yerine estetik ve hafif bir derinlik gölgesi */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+
+/* Butonun üzerine gelindiğinde yaşanacak hafif netleşme etkileşimi */
+
+.btn-details:hover {
+    background: rgba(17, 17, 17, 0.95) !important;
+    transform: scale(1.03) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+
+/* Karusel Kontrol Butonları */
+
+.side-ctrl-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: var(--color-text-dark);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto !important;
+    z-index: 100 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.left-arrow {
+    left: 2%;
+}
+
+.right-arrow {
+    right: 2%;
+}
+
+.side-ctrl-btn:hover {
+    background-color: var(--color-text-dark);
+    color: #ffffff;
+    border-color: var(--color-text-dark);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-footer-hint {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.control-hint {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.carousel-master-container {
+    position: relative;
+    width: 100%;
+}
+
+
+/* --- MAKSİMUM GENİŞLİKTEKİ POPUP (MODAL) ODASI --- */
+
+.project-premium-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-premium-modal.show-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-backdrop-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-master-window {
+    position: relative;
+    width: 92%;
+    max-width: 1280px;
+    height: 85vh;
+    max-height: 800px;
+    background-color: var(--color-bg);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: scale(0.98) translateY(10px);
+    /* Daha az mesafe, daha hızlı hissettirir */
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    z-index: 2001;
+}
+
+
+/* Modal aktif olduğunda (JavaScript ile eklenen sınıf) */
+
+.modal-master-window.show-active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.project-premium-modal.show-active .modal-master-window {
+    transform: scale(1) translateY(0);
+}
+
+.modal-close-trigger {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-dark);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.modal-close-trigger:hover {
+    transform: rotate(90deg);
+    background-color: var(--color-text-dark);
+    color: #fff;
+}
+
+.modal-split-layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Sol Resim Döngü Alanı */
+
+
+/* Sol Resim Döngü Alanı */
+
+.modal-gallery-zone {
+    position: relative;
+    width: 55%;
+    height: 100%;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+.modal-carousel-viewport {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.modal-carousel-track {
+    display: flex;
+    height: 100%;
+}
+
+.modal-img-slide {
+    position: relative;
+    flex: 0 0 100%;
+    min-width: 100%;
+    height: 100%;
+}
+
+.modal-placeholder-box {
+    width: 100%;
+    height: 100%;
+}
+
+.img-counter-tag {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 30px;
+    letter-spacing: 0.5px;
+}
+
+.modal-real-img {
+    width: calc(100% + 2px);
+    /* Resmi kasadan 2 piksel büyük yapıyoruz */
+    height: 100%;
+    margin-left: -1px;
+    /* Fazlalığı sağa ve sola 1'er piksel dağıtarak boşlukları yamıyoruz */
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: var(--transition-smooth);
+}
+
+.g-left {
+    left: 20px;
+}
+
+.g-right {
+    right: 20px;
+}
+
+.gallery-arrow-btn:hover {
+    background-color: #ffffff;
+    color: var(--color-text-dark);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-play-pause-btn {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    color: var(--color-text-dark);
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 12;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: var(--transition-smooth);
+}
+
+
+/* Media Query'yi kaldırıyoruz çünkü artık yüzde (%) kullanıyoruz */
+
+
+/* @media (min-width: 1280px) { .modal-img-slide { width: 704px; } } -> BU SATIRI SİL! */
+
+.img-counter-tag {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 30px;
+    letter-spacing: 0.5px;
+    z-index: 5;
+}
+
+
+/* Sağ Teknik Panel Alanı */
+
+.modal-details-zone {
+    width: 45%;
+    height: 100%;
+    padding: 60px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    background-color: var(--color-bg);
+}
+
+.modal-header-meta {
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 20px;
+}
+
+.modal-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-text-muted);
+    margin-bottom: 8px;
+}
+
+.modal-main-title {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--color-text-dark);
+    line-height: 1.3;
+}
+
+.modal-technical-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 35px;
+}
+
+.m-spec-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+    padding-bottom: 10px;
+}
+
+.m-spec-label {
+    width: 130px;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--color-text-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.m-spec-label i {
+    color: #888;
+    width: 16px;
+}
+
+.m-spec-value {
+    font-size: 13.5px;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.modal-text-description h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--color-text-dark);
+}
+
+.modal-text-description p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    text-align: justify;
+}
+
+
+/* İletişim Alanı */
+
+.contact-section {
+    background-color: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 50px;
+}
+
+.contact-details h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.contact-details p {
+    color: var(--color-text-muted);
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid var(--color-text-dark);
+    padding-left: 15px;
+}
+
+.info-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.info-value {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #444;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    font-family: var(--font-sans);
+    font-size: 13px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-text-dark);
+}
+
+.btn-submit {
+    background-color: var(--color-text-dark);
+    color: #ffffff;
+    align-self: flex-start;
+    border: 1px solid var(--color-text-dark);
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: transparent;
+    color: var(--color-text-dark);
+}
+
+
+/* Footer */
+
+.main-footer {
+    background-color: #f5f5f5;
+    color: var(--color-text-dark);
+    padding: 40px 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 88%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.footer-logo .footer-logo-img {
+    max-height: 70px;
+    width: auto;
+    opacity: 0.8;
+    transition: var(--transition-smooth);
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+
+/* --- RESPONSIVE AYARLARI --- */
+
+/* 1. MASAÜSTÜ GENİŞ EKRANLAR */
+@media (max-width: 1400px) {
+    .project-card-premium { width: calc((100vw - 200px - (24px * 3)) / 4); }
+}
+
+/* 2. TABLET VE LAPTOP */
+@media (max-width: 1100px) {
+    .project-card-premium { width: calc((100vw - 160px - (24px * 2)) / 3); }
+    .services-grid { grid-template-columns: repeat(6, 1fr); gap: 20px; }
+    .services-grid .service-card { grid-column: span 2; }
+    .services-grid .text-up, .services-grid .text-down { transform: translateY(0); }
+}
+
+/* 3. MOBİL TABLET (850px ve altı) */
+@media (max-width: 850px) {
+    .hamburger { display: block; }
+    .navbar-menu { display: none; }
+    .project-card-premium { width: calc((100vw - 120px - 24px) / 2); }
+    .about-grid, .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
+    .services-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    .services-grid .service-card { grid-column: span 1 !important; min-height: auto !important; }
+    
+    /* Hero düzenleme */
+    .hero-section { height: auto; padding: 60px 0; }
+    .hero-line-art { height: 60%; opacity: 0.04; }
+
+    /* Modal Mobil Düzeltme */
+    .modal-master-window { 
+        width: 90% !important; 
+        height: 85vh !important; 
+        top: 50% !important; 
+        left: 50% !important; 
+        transform: translate(-50%, -50%) !important; 
+        position: fixed !important; 
+        overflow: hidden !important; 
+        border-radius: 12px !important;
+    }
+    
+    .modal-split-layout { 
+        flex-direction: column !important; 
+        height: 100% !important; 
+        overflow-y: auto !important; 
+        display: flex !important;
+    }
+    
+    /* Galeri Alanı: Buradaki kilit nokta resmi tamamen hapsetmektir */
+    .modal-gallery-zone { 
+        width: 100% !important; 
+        height: 250px !important; 
+        min-height: 250px !important; 
+        max-height: 250px !important; 
+        position: relative !important;
+        overflow: hidden !important; 
+        flex: 0 0 auto !important; /* Esnemeyi tamamen durdur */
+    }
+    
+    /* Resimlerin esnemesini engellemek için mutlak kural */
+    .modal-gallery-zone img, 
+    .modal-real-img { 
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important; 
+        height: 100% !important; 
+        object-fit: cover !important; 
+        object-position: center !important;
+        display: block !important; 
+    }
+    
+    /* Metin alanı */
+    .modal-details-zone { 
+        width: 100% !important; 
+        padding: 20px !important; 
+        height: auto !important; 
+        flex: 1 !important;
+    }
+}
+
+/* 3.1. ARA GEÇİŞ BÖLGESİ (500px - 850px) */
+@media (min-width: 500px) and (max-width: 850px) {
+    .modal-master-window {
+        width: 70% !important; /* Biraz daha daraltarak daha zarif durmasını sağla */
+        height: 70vh !important;
+    }
+    .modal-gallery-zone {
+        height: 300px !important; /* Bu genişlikte resim alanını biraz büyütüyoruz */
+        min-height: 300px !important;
+    }
+}
+
+/* 4. AKILLI TELEFONLAR */
+@media (max-width: 600px) {
+    .project-card-premium { width: calc(100vw - 80px); }
+    .left-social-sidebar, .side-ctrl-btn { display: none; }
+    .main-wrapper { margin-left: 0; width: 100%; padding-top: 70px; }
+    .services-grid { grid-template-columns: 1fr !important; }
+    .form-row { flex-direction: column; gap: 15px; }
+    
+    .hero-content h1 { font-size: 28px; }
+    .hero-actions { flex-direction: column; gap: 10px; }
+}

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <title>Vera Studio | Entegre Tasarım ve Mühendislik Çözümleri</title>
+    <!-- Profesyonel Tipografi İçin Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- İkonlar İçin FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Harici CSS Bağlantısı -->
+    <link rel="stylesheet" href="styles.css"> </head>
+
+<body>
+    <header class="navbar">
+    <div class="navbar-container">
+        <a href="#home" class="navbar-logo" id="logo-link"> 
+            <img src="vera.png" alt="Vera Studio Logo" class="logo-img"> 
+        </a>
+        
+        <nav class="navbar-menu"> 
+            <a href="#home" class="active">Ana Sayfa</a> 
+            <a href="#about">Hakkımızda</a> 
+            <a href="#services">Hizmetlerimiz</a> 
+            <a href="#projects">Projelerimiz</a> 
+            <a href="#contact">İletişim</a> 
+        </nav>
+
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+   <nav class="mobile-menu" id="mobile-menu">
+    <a href="#home">Ana Sayfa</a>
+    <a href="#about">Hakkımızda</a>
+    <a href="#services">Hizmetlerimiz</a>
+    <a href="#projects">Projelerimiz</a>
+    <a href="#contact">İletişim</a>
+</nav>
+
+<aside class="left-social-sidebar">
+    <div class="sidebar-social-wrapper"> 
+        <span>Takip Edin</span>
+        <div class="divider"></div>
+        <div class="social-icons"> 
+            <a href="https://instagram.com/studiovera.tr" target="_blank"><i class="fa-brands fa-instagram"></i></a> 
+            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a> 
+            <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a> 
+        </div>
+    </div>
+</aside>
+    <!-- Ana İçerik Alanı -->
+    <main class="main-wrapper">
+       <section id="home" class="hero-section hero-bg-container">
+    <div class="hero-line-art">
+        <img src="assets/genel/hero.png" alt="Vera Studio Line Art">
+    </div>
+
+    <div class="container hero-content relative-container">
+        <h1>TASARIM VE MÜHENDİSLİĞİ <br><span class="highlight">AYNI MASADA</span> BULUŞTURUYORUZ.</h1>
+        <p>Fonksiyonel, estetik ve sürdürülebilir çözümler üretiyoruz.</p>
+        <div class="hero-actions"> 
+            <a href="#projects" class="btn btn-primary">Projelerimizi İnceleyin</a> 
+            <a href="#contact" class="btn btn-secondary">Bizimle Çalışın</a> 
+        </div>
+    </div>
+</section>
+
+        <!-- Hakkımızda Bölümü -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-meta"> <span class="section-number">02</span> <span class="section-tagline">Kimiz?</span> </div>
+                <div class="about-grid">
+                    <div class="about-title-area">
+                        <h2>HAKKIMIZDA</h2> </div>
+                    <div class="about-text-area">
+                        <p class="lead-text"> <strong>Vera Studio</strong>; statik proje, elektrik projesi, 3D görselleştirme, enerji kimlik belgesi ve uygulama danışmanlığı alanlarında bütünleşik çözümler sunar. </p>
+                        <p> Mühendislik disiplininin getirdiği teknik hassasiyeti, mimari estetik ve vizyonla aynı masada eritiyoruz. Her projenin kendine has dinamiklerine odaklanarak, güvenli yapısal çözümler ile göz alıcı görsel sunumları tek bir çatı altında hayata geçiriyoruz. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hizmetlerimiz Bölümü -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-meta"> <span class="section-number">03</span> <span class="section-tagline">Neler Yapıyoruz?</span> </div>
+                <h2>HİZMETLERİMİZ</h2>
+                <div class="services-grid">
+                    <div class="service-card text-up">
+                        <div class="service-icon">01</div>
+                        <h3>Statik Proje</h3>
+                        <p>Modern yönetmeliklere tam uyumlu, güvenli, optimize edilmiş ve uygulanabilir yapısal analiz and mühendislik çözümleri.</p>
+                    </div>
+                    <div class="service-card text-down">
+                        <div class="service-icon">02</div>
+                        <h3>Elektrik Projesi</h3>
+                        <p>Yapıların fonksiyonel ihtiyaçlarına yönelik modern, enerji verimli ve güvenli elektrik altyapı ve tesisat projeleri.</p>
+                    </div>
+                    <div class="service-card text-up">
+                        <div class="service-icon">03</div>
+                        <h3>3D Görselleştirme</h3>
+                        <p>Projelerinizin ruhunu yansıtan, yüksek çözünürlüklü, fotogerçekçi mimari renderlar ve etkileyici görsel sunumlar.</p>
+                    </div>
+                    <div class="service-card text-down">
+                        <div class="service-icon">04</div>
+                        <h3>Enerji Kimlik Belgesi (EKB)</h3>
+                        <p>Yasal mevzuata uygun, yapıların enerji performansını maksimuma çıkaran analizler ve belgelendirme süreçleri.</p>
+                    </div>
+                    <div class="service-card text-up">
+                        <div class="service-icon">05</div>
+                        <h3>Uygulama Danışmanlığı</h3>
+                        <p>Projelerin şantiye ve uygulama aşamalarında teknik standartlara, detay prolerine ve iş takvimine tam uyum kontrolü sağlayan mühendislik danışmanlığı.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projelerimiz Bölümü -->
+           
+             <section id="projects" class="projects-section">
+            <div class="container-fluid-carousel">
+                <div class="container-meta-wrapper">
+                    <div class="section-meta"> <span class="section-number">04</span> <span class="section-tagline">Neler Ürettik?</span> </div>
+                  
+                      <h2>PROJELERİMİZ</h2> </div>
+                <div class="carousel-master-container">
+                    <button class="side-ctrl-btn left-arrow" id="prevBtn" aria-label="Önceki Projeler"> <i class="fa-solid fa-chevron-left"></i> </button>
+                    <div class="carousel-viewport" id="carouselViewport">
+                        <div class="carousel-track" id="projectTrack">
+                            <div class="project-card-premium" data-id="p1" data-title="Torbalı Konut Projesi" data-category="Statik / Mimari" data-location="İzmir / Torbalı" data-year="2026" data-scope="Statik Modelleme & Cephe Vizyonu" data-desc="Bu projede modern deprem yönetmeliklerine tam uyumlu gelişmiş betonarme taşıyıcı sistem analizleri yapılmıştır. Eş zamanlı olarak estetik ve fonksiyonelliği harmanlayan cephe tasarımı geliştirilmiştir." data-images="assets/projects/p1/p1-1.png, assets/projects/p1/p1-2.png, assets/projects/p1/p1-3.png">
+                                <div class="card-image-slot">
+                                    <div class="premium-placeholder"></div> <span class="premium-tag">Statik / Mimari</span> </div>
+                                <div class="card-details-slot">
+                                    <h3>Torbalı Konut Projesi</h3>
+                                    <div class="project-meta-specs">
+                                        <div class="spec-item"><span class="spec-label">Lokasyon:</span> İzmir / Torbalı</div>
+                                        <div class="spec-item"><span class="spec-label">Yıl:</span> 2026</div>
+                                    </div>
+                                    <div class="project-card-overlay"> <span class="btn-details">Detaylar</span> </div>
+                                </div>
+                            </div>
+                            <div class="project-card-premium" data-id="p2" data-title="Kemalpaşa Endüstriyel Yapı" data-category="3D Render" data-location="İzmir / Kemalpaşa" data-year="2026" data-scope="Betonarme Analiz & Dış Cephe" data-desc="Endüstriyel tesis ihtiyaçlarına yönelik, geniş açıklıklara sahip optimize edilmiş taşıyıcı sistem tasarımı tamamlanmıştır. Corona ve Vray motorları kullanılarak fotogerçekçi çevre ve dış cephe görselleştirmeleri üretilmiştir." data-images="kemalpasa-1.jpg, kemalpasa-2.jpg">
+                                <div class="card-image-slot">
+                                    <div class="premium-placeholder"></div> <span class="premium-tag">3D Render</span> </div>
+                                <div class="card-details-slot">
+                                    <h3>Kemalpaşa Endüstriyel Yapı</h3>
+                                    <div class="project-meta-specs">
+                                        <div class="spec-item"><span class="spec-label">Lokasyon:</span> İzmir / Kemalpaşa</div>
+                                        <div class="spec-item"><span class="spec-label">Yıl:</span> 2026</div>
+                                    </div>
+                                    <div class="project-card-overlay"> <span class="btn-details">Detaylar</span> </div>
+                                </div>
+                            </div>
+                            <div class="project-card-premium" data-id="p3" data-title="Bayraklı Rezidans Projesi" data-category="Elektrik / Proje" data-location="İzmir / Bayraklı" data-year="2025" data-scope="Kuvvetli & Zayıf Akım Altyapısı" data-desc="Yüksek katlı rezidans bloğunun tüm kuvvetli akım, aydınlatma, yangın ihbar ve akıllı bina altyapı projeleri mühendislik standartlarına tam uyumlu ve enerji verimliliği odaklı olarak hazırlanmıştır." data-images="bayrakli-1.jpg">
+                                <div class="card-image-slot">
+                                    <div class="premium-placeholder"></div> <span class="premium-tag">Elektrik / Proje</span> </div>
+                                <div class="card-details-slot">
+                                    <h3>Bayraklı Rezidans Projesi</h3>
+                                    <div class="project-meta-specs">
+                                        <div class="spec-item"><span class="spec-label">Lokasyon:</span> İzmir / Bayraklı</div>
+                                        <div class="spec-item"><span class="spec-label">Yıl:</span> 2025</div>
+                                    </div>
+                                    <div class="project-card-overlay"> <span class="btn-details">Detaylar</span> </div>
+                                </div>
+                            </div>
+                            <div class="project-card-premium" data-id="p4" data-title="Çiğli Karma Yaşam Kompleksi" data-category="Enerji Kimlik (EKB)" data-location="İzmir / Çiğli" data-year="2026" data-scope="Bütünleşik EKB Belgelendirme" data-desc="Karma kullanımlı projenin yasal mevzuatlara tam uyumlu Enerji Kimlik Belgesi (EKB) süreçleri yönetilmiştir. Isı yalıtımı ve mekanik otomasyon sistemlerinin performans analizleri yapılarak belgelendirilmiştir." data-images="cigli-1.jpg, cigli-2.jpg, cigli-3.jpg, cigli-4.jpg">
+                                <div class="card-image-slot">
+                                    <div class="premium-placeholder"></div> <span class="premium-tag">Enerji Kimlik (EKB)</span> </div>
+                                <div class="card-details-slot">
+                                    <h3>Çiğli Karma Yaşam Kompleksi</h3>
+                                    <div class="project-meta-specs">
+                                        <div class="spec-item"><span class="spec-label">Lokasyon:</span> İzmir / Çiğli</div>
+                                        <div class="spec-item"><span class="spec-label">Yıl:</span> 2026</div>
+                                    </div>
+                                    <div class="project-card-overlay"> <span class="btn-details">Detaylar</span> </div>
+                                </div>
+                            </div>
+                            <div class="project-card-premium" data-id="p5" data-title="Balatçık Loft Yapısı" data-category="Uygulama / Mimari" data-location="İzmir / Balatçık" data-year="2025" data-scope="Şantiye Uygulama Danışmanlığı" data-desc="Tasarım aşamasından şantiye safhasına geçiş sürecinde; tüm detay projelerinin imalat standartlarına, statik raporlara ve mimari detaylara tam uyumu yerinde denetlenmiş ve teknik danışmanlık sağlanmıştır." data-images="balatcik-1.jpg, balatcik-2.jpg">
+                                <div class="card-image-slot">
+                                    <div class="premium-placeholder"></div> <span class="premium-tag">Uygulama / Mimari</span> </div>
+                                <div class="card-details-slot">
+                                    <h3>Balatçık Loft Yapısı</h3>
+                                    <div class="project-meta-specs">
+                                        <div class="spec-item"><span class="spec-label">Lokasyon:</span> İzmir / Balatçık</div>
+                                        <div class="spec-item"><span class="spec-label">Yıl:</span> 2025</div>
+                                    </div>
+                                    <div class="project-card-overlay"> <span class="btn-details">Detaylar</span> </div>
+                                </div>
+                            </div>
+                            <div class="project-card-premium" data-id="p6" data-title="Çamdibi Konsept Tasarımı" data-category="3D Görselleştirme" data-location="İzmir / Çamdibi" data-year="2026" data-scope="Fotogerçekçi İç & Dış Mekan Render" data-desc="Projenin tüm pazarlama faaliyetlerinde kullanılmak üzere üst düzey iç mekan mobilya yerleşimleri ve modern cephe malzeme detayları 3ds Max ve Corona Renderer ile kusursuzca modellenmiştir." data-images="camdibi-1.jpg, camdibi-2.jpg, camdibi-3.jpg">
+                                <div class="card-image-slot">
+                                    <div class="premium-placeholder"></div> <span class="premium-tag">3D Görselleştirme</span> </div>
+                                <div class="card-details-slot">
+                                    <h3>Çamdibi Konsept Tasarımı</h3>
+                                    <div class="project-meta-specs">
+                                        <div class="spec-item"><span class="spec-label">Lokasyon:</span> İzmir / Çamdibi</div>
+                                        <div class="spec-item"><span class="spec-label">Yıl:</span> 2026</div>
+                                    </div>
+                                    <div class="project-card-overlay"> <span class="btn-details">Detaylar</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="side-ctrl-btn right-arrow" id="nextBtn" aria-label="Sonraki Projeler"> <i class="fa-solid fa-chevron-right"></i> </button>
+                </div>
+                <div class="carousel-footer-hint"> <span class="control-hint">Sürükleyerek veya yan oklardan projeleri inceleyebilirsiniz</span> </div>
+            </div>
+        </section>
+        <!-- İletişim Bölümü -->
+        <section id="contact" class="contact-section">
+    <div class="container">
+        <div class="section-meta"> <span class="section-number">05</span> <span class="section-tagline">Bize Ulaşın</span> </div>
+        <h2>İLETİŞİM</h2>
+        <div class="contact-wrapper">
+            <div class="contact-details">
+                <h3>Projenizi Birlikte Planlayalım</h3>
+                <p>Mühendislik ve tasarım ihtiyaçlarınız için ofisimizle iletişime geçebilir, bütünleşik çözümlerimizden yararlanabilirsiniz.</p>
+                <div class="contact-info-list">
+                    <div class="info-item"> <span class="info-label">Telefon</span> <span class="info-value">0554 120 63 91</span> </div>
+                    <div class="info-item"> <span class="info-label">E-posta</span> <span class="info-value">studiovera.tr@gmail.com</span> </div>
+                    <div class="info-item"> <span class="info-label">Instagram</span> <span class="info-value">@studiovera.tr</span> </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <form class="contact-form" action="https://formsubmit.co/studiovera.tr@gmail.com" method="POST">
+                    
+                    <input type="hidden" name="_subject" value="Vera Studio'dan Yeni Mesaj!">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Adınız Soyadınız</label>
+                            <input type="text" name="name" placeholder="Kelami Doğan" required> 
+                        </div>
+                        <div class="form-group">
+                            <label>E-posta Adresiniz</label>
+                            <input type="email" name="email" placeholder="ornek@eposta.com" required> 
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Konu</label>
+                        <input type="text" name="subject" placeholder="Statik Proje Teklifi..." required> 
+                    </div>
+                    <div class="form-group">
+                        <label>Mesajınız / Proje Detayları</label>
+                        <textarea name="message" rows="6" placeholder="Projenizin konumu, metrekaresi veya detaylarından bahsedin..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Mesajı Gönder</button>
+                    <input type="hidden" name="_next" value="https://brilliant-hummingbird-2e0c9d.netlify.app/">
+                    
+                </form>
+                </div>
+        </div>
+    </div>
+</section>
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-container">
+                <div class="footer-logo"> <img src="vera.png" alt="Vera Studio Logo" class="footer-logo-img"> </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Vera Studio. Tüm Hakları Saklıdır.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- PREMIUM GENİŞ POPUP (MODAL) PENCERESİ -->
+    <div class="project-premium-modal" id="premiumModal">
+        <div class="modal-backdrop-overlay" onclick="closeProjectModal()"></div>
+        <div class="modal-master-window">
+            <button class="modal-close-trigger" onclick="closeProjectModal()" aria-label="Kapat"> <i class="fa-solid fa-xmark"></i> </button>
+            <div class="modal-split-layout">
+                <!-- SOL ALAN: KESİNTİSİZ RESİM GALERİSİ -->
+                <div class="modal-gallery-zone">
+                    <div class="modal-carousel-viewport" id="modalView">
+                        <div class="modal-carousel-track" id="modalTrack">
+                            <!-- JS dinamik resimleri buraya basacak -->
+                        </div>
+                    </div>
+                    <button class="gallery-arrow-btn g-left" id="modalPrevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="gallery-arrow-btn g-right" id="modalNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+                    <button class="gallery-play-pause-btn" id="modalPlayPauseBtn" title="Akışı Durdur/Başlat"> <i class="fa-solid fa-pause"></i> </button>
+                </div>
+                <!-- SAĞ ALAN: TÜRKÇE TEKNİK DETAY PANELİ -->
+                <div class="modal-details-zone">
+                    <div class="modal-header-meta"> <span class="modal-tag" id="modalCategory">-</span>
+                        <h2 class="modal-main-title" id="modalTitle">-</h2> </div>
+                    <div class="modal-technical-specs">
+                        <div class="m-spec-row"> <span class="m-spec-label"><i class="fa-solid fa-location-dot"></i> Lokasyon:</span> <span class="m-spec-value" id="modalLocation">-</span> </div>
+                        <div class="m-spec-row"> <span class="m-spec-label"><i class="fa-solid fa-calendar-days"></i> Yıl:</span> <span class="m-spec-value" id="modalYear">-</span> </div>
+                        <div class="m-spec-row"> <span class="m-spec-label"><i class="fa-solid fa-layer-group"></i> Kapsam:</span> <span class="m-spec-value" id="modalScope">-</span> </div>
+                    </div>
+                    <div class="modal-text-description">
+                        <h3>Proje Hakkında</h3>
+                        <p id="modalDescription">-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        // --- 1. DİNAMİK GÖRSEL YÜKLEME MOTORU ---
+    document.addEventListener("DOMContentLoaded", function() {
+        const cards = document.querySelectorAll('.project-card-premium');
+        
+        cards.forEach(card => {
+            const imageList = card.getAttribute('data-images');
+            const placeholder = card.querySelector('.premium-placeholder');
+            
+            if (imageList && placeholder) {
+                const firstImage = imageList.split(',')[0].trim();
+                
+                // Placeholder'ı DOM'dan tamamen siliyoruz (boşluk kalmasın diye)
+                placeholder.remove();
+                
+                const img = document.createElement('img');
+                img.src = firstImage;
+                img.className = 'project-img';
+                img.alt = card.getAttribute('data-title') || "Proje Görseli";
+                
+                // Resmi slotun en başına ekle
+                const imageSlot = card.querySelector('.card-image-slot');
+                imageSlot.prepend(img); // prepend ile en başa ekliyoruz
+            }
+        });
+    });
+        
+        // --- NAVBAR SCROLL KONTROLÜ ---
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            }
+            else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        // --- ANA SAYFA KARUSEL DÖNGÜSÜ ---
+        const view = document.getElementById('carouselViewport');
+        const track = document.getElementById('projectTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let originalCards = Array.from(track.children);
+        let cardCount = originalCards.length;
+        originalCards.forEach(card => {
+            track.appendChild(card.cloneNode(true));
+        });
+        for (let i = cardCount - 1; i >= 0; i--) {
+            track.insertBefore(originalCards[i].cloneNode(true), track.firstChild);
+        }
+        let isDragging = false
+            , startX, initialScrollLeft, autoScrollTimer = null
+            , resumeTimer = null
+            , isTransitioning = false;
+
+        function getCardWidth() {
+            const firstCard = track.querySelector('.project-card-premium');
+            return firstCard ? firstCard.getBoundingClientRect().width + 24 : 252;
+        }
+
+        function initPosition() {
+            view.scrollLeft = cardCount * getCardWidth();
+        }
+        window.addEventListener('load', initPosition);
+        window.addEventListener('resize', initPosition);
+
+        function checkInfiniteBounds() {
+            const cardWidth = getCardWidth();
+            const currentScroll = view.scrollLeft;
+            const minBounds = cardCount * cardWidth;
+            if (currentScroll >= (cardCount * 2 * cardWidth)) {
+                view.scrollLeft = currentScroll - minBounds;
+            }
+            else if (currentScroll <= (cardWidth * 0.5)) {
+                view.scrollLeft = currentScroll + minBounds;
+            }
+        }
+
+        function startAutoScroll() {
+            stopAutoScroll();
+            autoScrollTimer = setInterval(() => {
+                if (!isDragging && !isTransitioning) {
+                    view.scrollLeft += 1;
+                    checkInfiniteBounds();
+                }
+            }, 25);
+        }
+
+        function stopAutoScroll() {
+            if (autoScrollTimer) {
+                clearInterval(autoScrollTimer);
+                autoScrollTimer = null;
+            }
+        }
+
+        function triggerResumeDelay() {
+            if (resumeTimer) clearTimeout(resumeTimer);
+            resumeTimer = setTimeout(() => {
+                if (!view.matches(':hover') && !isDragging) startAutoScroll();
+            }, 2000);
+        }
+        view.addEventListener('mouseenter', stopAutoScroll);
+        view.addEventListener('mouseleave', () => {
+            if (!isDragging) startAutoScroll();
+        });
+        view.addEventListener('scroll', () => {
+            if (isDragging) checkInfiniteBounds();
+        });
+        nextBtn.addEventListener('click', () => {
+            if (isTransitioning) return;
+            stopAutoScroll();
+            isTransitioning = true;
+            view.scrollTo({
+                left: view.scrollLeft + getCardWidth()
+                , behavior: 'smooth'
+            });
+            setTimeout(() => {
+                checkInfiniteBounds();
+                isTransitioning = false;
+                triggerResumeDelay();
+            }, 450);
+        });
+        prevBtn.addEventListener('click', () => {
+            if (isTransitioning) return;
+            stopAutoScroll();
+            isTransitioning = true;
+            view.scrollTo({
+                left: view.scrollLeft - getCardWidth()
+                , behavior: 'smooth'
+            });
+            setTimeout(() => {
+                checkInfiniteBounds();
+                isTransitioning = false;
+                triggerResumeDelay();
+            }, 450);
+        });
+        view.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            stopAutoScroll();
+            view.classList.add('grabbing');
+            startX = e.pageX - view.offsetLeft;
+            initialScrollLeft = view.scrollLeft;
+        });
+        window.addEventListener('mouseup', () => {
+            if (!isDragging) return;
+            isDragging = false;
+            view.classList.remove('grabbing');
+            checkInfiniteBounds();
+            triggerResumeDelay();
+        });
+        view.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const x = e.pageX - view.offsetLeft;
+            view.scrollLeft = initialScrollLeft - (x - startX) * 1.5;
+        });
+        setTimeout(startAutoScroll, 500);
+        // --- POPUP VE GALERİ DÖNGÜ MOTORU ---
+        const modal = document.getElementById('premiumModal');
+        const mView = document.getElementById('modalView');
+        const mTrack = document.getElementById('modalTrack');
+        const mPlayPauseBtn = document.getElementById('modalPlayPauseBtn');
+        const mCloseBtn = document.getElementById('modalCloseBtn'); // Çarpı butonu ID'si
+        const mNextBtn = document.getElementById('modalNextBtn');
+        const mPrevBtn = document.getElementById('modalPrevBtn');
+        let modalAutoPlay = true
+            , modalLoopTimer = null
+            , mTransitioning = false
+            , imgCount = 3;
+        // Kart tıklama olayı
+        document.addEventListener('click', function (e) {
+            const card = e.target.closest('.project-card-premium');
+            if (card && !isDragging) {
+                openProjectModal(card);
+            }
+        });
+
+        function openProjectModal(card) {
+            document.getElementById('modalTitle').innerText = card.getAttribute('data-title');
+            document.getElementById('modalCategory').innerText = card.getAttribute('data-category');
+            document.getElementById('modalLocation').innerText = card.getAttribute('data-location');
+            document.getElementById('modalYear').innerText = card.getAttribute('data-year');
+            document.getElementById('modalScope').innerText = card.getAttribute('data-scope');
+            document.getElementById('modalDescription').innerText = card.getAttribute('data-desc');
+            mTrack.innerHTML = '';
+            // --- YENİ: DİNAMİK RESİM MANTIĞI ---
+            const rawImages = card.getAttribute('data-images');
+            // Eğer resim girilmemişse boş kalmaması için yer tutucu atıyoruz
+            const images = rawImages ? rawImages.split(',') : ['placeholder.jpg'];
+            imgCount = images.length;
+            let slideTemplates = '';
+            images.forEach((imgUrl, index) => {
+                // Sadece birden fazla resim varsa sayaç gösterilsin
+                let counterHTML = imgCount > 1 ? `<span class="img-counter-tag">Görsel ${index + 1} / ${imgCount}</span>` : '';
+                slideTemplates += `
+            <div class="modal-img-slide">
+                <img src="${imgUrl.trim()}" alt="Proje Görseli ${index + 1}" class="modal-real-img">
+                ${counterHTML}
+            </div>`;
+            });
+            // Sonsuz döngü kurgusunu korumak için slaytları 3 kez çoğaltıyoruz
+            for (let k = 0; k < 3; k++) {
+                mTrack.insertAdjacentHTML('beforeend', slideTemplates);
+            }
+            // -----------------------------------
+            modal.classList.add('show-active');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                const slideWidth = mView.getBoundingClientRect().width;
+                mView.scrollLeft = imgCount * slideWidth;
+                // --- YENİ: TEK RESİM KONTROLÜ ---
+                if (imgCount <= 1) {
+                    // Tek resim varsa kontrolleri gizle ve otomatik oynatmayı kapat
+                    if (mNextBtn) mNextBtn.style.display = 'none';
+                    if (mPrevBtn) mPrevBtn.style.display = 'none';
+                    if (mPlayPauseBtn) mPlayPauseBtn.style.display = 'none';
+                    modalAutoPlay = false;
+                }
+                else {
+                    // Birden fazla resim varsa kontrolleri göster ve otomatik oynatmayı başlat
+                    if (mNextBtn) mNextBtn.style.display = 'flex';
+                    if (mPrevBtn) mPrevBtn.style.display = 'flex';
+                    if (mPlayPauseBtn) mPlayPauseBtn.style.display = 'flex';
+                    modalAutoPlay = true;
+                    if (mPlayPauseBtn) mPlayPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                    startModalAutoScroll();
+                }
+                // ---------------------------------
+            }, 100);
+        }
+        // --- MODAL KAPATMA FONKSİYONU ---
+        function closeProjectModal() {
+            modal.classList.remove('show-active');
+            document.body.style.overflow = '';
+            stopModalAutoScroll();
+        }
+        // Çarpı (X) ile kapatma
+        if (mCloseBtn) mCloseBtn.addEventListener('click', closeProjectModal);
+        // ESC ile kapatma
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('show-active')) {
+                closeProjectModal();
+            }
+        });
+        // --- MODAL GALERİ KONTROLLERİ ---
+        function checkModalBounds() {
+            // imgCount'un sıfır olma ihtimaline karşı güvenlik (hata vermemesi için)
+            if (imgCount === 0) return;
+            const w = mView.getBoundingClientRect().width;
+            if (mView.scrollLeft >= (imgCount * 2 * w)) {
+                mView.scrollLeft -= (imgCount * w);
+            }
+            else if (mView.scrollLeft <= (w * 0.5)) {
+                mView.scrollLeft += (imgCount * w);
+            }
+        }
+
+        function startModalAutoScroll() {
+            stopModalAutoScroll();
+            modalLoopTimer = setInterval(() => {
+                if (modalAutoPlay && !mTransitioning && imgCount > 1) {
+                    mTransitioning = true;
+                    mView.scrollTo({
+                        left: mView.scrollLeft + mView.getBoundingClientRect().width
+                        , behavior: 'smooth'
+                    });
+                    setTimeout(() => {
+                        checkModalBounds();
+                        mTransitioning = false;
+                    }, 500);
+                }
+            }, 3000);
+        }
+
+        function stopModalAutoScroll() {
+            if (modalLoopTimer) {
+                clearInterval(modalLoopTimer);
+                modalLoopTimer = null;
+            }
+        }
+        if (mNextBtn) {
+            mNextBtn.addEventListener('click', () => {
+                if (mTransitioning || imgCount <= 1) return;
+                mTransitioning = true;
+                mView.scrollTo({
+                    left: mView.scrollLeft + mView.getBoundingClientRect().width
+                    , behavior: 'smooth'
+                });
+                setTimeout(() => {
+                    checkModalBounds();
+                    mTransitioning = false;
+                }, 500);
+            });
+        }
+        if (mPrevBtn) {
+            mPrevBtn.addEventListener('click', () => {
+                if (mTransitioning || imgCount <= 1) return;
+                mTransitioning = true;
+                mView.scrollTo({
+                    left: mView.scrollLeft - mView.getBoundingClientRect().width
+                    , behavior: 'smooth'
+                });
+                setTimeout(() => {
+                    checkModalBounds();
+                    mTransitioning = false;
+                }, 500);
+            });
+        }
+        if (mPlayPauseBtn) {
+            mPlayPauseBtn.addEventListener('click', () => {
+                if (imgCount <= 1) return; // Tek resimde buton tıklamasını da engelle
+                modalAutoPlay = !modalAutoPlay;
+                if (modalAutoPlay) {
+                    mPlayPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                    startModalAutoScroll();
+                }
+                else {
+                    mPlayPauseBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                    stopModalAutoScroll();
+                }
+            });
+        }
+        
+        // Hamburher MEnü
+       
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLinks = document.querySelectorAll('.mobile-menu a');
+    const logoLink = document.getElementById('logo-link');
+
+    // 1. Aktif çizgiyi doğru sayfaya koyan fonksiyon
+    function updateActiveLink() {
+        // Mevcut URL'deki hash (#about gibi) kısmını al
+        const hash = window.location.hash || "#home";
+        
+        menuLinks.forEach(link => {
+            link.classList.remove('active-menu-link');
+            if (link.getAttribute('href') === hash) {
+                link.classList.add('active-menu-link');
+            }
+        });
+    }
+
+    // 2. Hamburger butonu kontrolü
+    hamburger.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    // 3. Linklere tıklanınca menüyü kapat ve güncellemeyi tetikle
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            
+            // Sayfa geçişi sırasında çizgi güncellensin
+            setTimeout(updateActiveLink, 50); 
+        });
+    });
+
+    // 4. Logo'ya tıklandığında menüyü kapat ve ana sayfayı aktif yap
+    if (logoLink) {
+        logoLink.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            setTimeout(updateActiveLink, 50);
+        });
+    }
+
+    // Sayfa her yüklendiğinde (veya F5 atıldığında) çizgiyi kontrol et
+    window.addEventListener('load', updateActiveLink);
+    window.addEventListener('hashchange', updateActiveLink);
+
+    </script>
+</body>
+
+</html>
