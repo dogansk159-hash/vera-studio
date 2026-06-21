@@ -1,1 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
 
+media_folder: "assets"
+public_folder: "assets"
+
+collections:
+  - name: "projeler"
+    label: "Projeler"
+    folder: "projeler"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Proje Adı", name: "title", widget: "string"}
+      - {label: "Görsel", name: "image", widget: "image"}
+      - {label: "Açıklama", name: "body", widget: "markdown"}
